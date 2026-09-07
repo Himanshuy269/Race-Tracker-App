@@ -74,7 +74,7 @@ fun RaceTrackerApp() {
               coroutineScope {
                   launch { playerOne.run() }
                   launch { playerTwo.run() }
-              }
+                  }
             raceInProgress=false
         }
     }
