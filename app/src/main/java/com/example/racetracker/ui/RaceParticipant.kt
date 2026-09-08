@@ -41,15 +41,15 @@ class RaceParticipant(
     var currentProgress by mutableStateOf(initialProgress)
         private set
     suspend fun run(){
-        try {
+       // try {
             while (currentProgress < maxProgress) {
                 delay(progressDelayMillis)
                 currentProgress += progressIncrement
-            }
-        } catch(e: CancellationException){
-            Log.e("RaceParticipant", "$name: ${e.message}")
-            throw e // Always re-throw CancellationException.
-        }
+           // }
+        } //catch(e: CancellationException){
+            //Log.e("RaceParticipant", "$name: ${e.message}")
+           // throw e // Always re-throw CancellationException.
+        //}
     }
 
     /**
